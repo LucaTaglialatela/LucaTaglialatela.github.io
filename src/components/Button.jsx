@@ -8,6 +8,7 @@ const StyledButton = styled.button`
     padding: 1.2rem 2.4rem;
     background: var(--brand);
     color: var(--background);
+    font-size: 1.6rem;
     position: relative;
     overflow: hidden;
     transition: opacity .2s;
@@ -17,11 +18,9 @@ const StyledButton = styled.button`
     }
 `;
 
-function Button({ children }) {
+function Button({ children, href }) {
     return (
-        <form action="./Luca_Taglialatela_Resume__0923.pdf">
-            <StyledButton type="submit" >{children}</StyledButton>
-        </form>
+        <a href={href}><StyledButton type="button">{children}</StyledButton></a>
     );
 }
 

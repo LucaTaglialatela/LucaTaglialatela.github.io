@@ -29,10 +29,6 @@ const Icon = styled.svg`
     }
 `;
 
-const Resume = styled.div`
-  justify-content: right;
-`;
-
 function Header() {
     return (
         <Headerbox>
@@ -47,8 +43,7 @@ function Header() {
                     <Icon><Orcid /></Icon>
                 </a>
             </Socials>
-            <Button>My Resume</Button>
-            {/* <Resume><a href="./Luca_Taglialatela_Resume__0923.pdf">hmps</a></Resume> */}
+            <Button href={"./Luca_Taglialatela_Resume__0923.pdf"}>My Resume</Button>
         </Headerbox>
     );
 }

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import HeaderLine from './HLine';
 
 const SectionHeader = styled.div`
     display: flex;
@@ -8,13 +9,6 @@ const SectionHeader = styled.div`
 
 const SectionTitle = styled.h3`
     font-size: 5.6rem;
-`;
-
-const HeaderLine = styled.div`
-    flex-grow: 1;
-    height: 1px;
-    background: #ebecf3;
-    opacity: .3;
 `;
 
 function Title(props) {
