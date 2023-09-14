@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { LinkedIn, GitHub, Orcid } from './SvgComponent';
+import { LinkedIn, GitHub, Orcid } from './utils/SvgComponent';
+import Button from './Button';
 
 const Headerbox = styled.header`
     display: flex;
@@ -24,7 +25,7 @@ const Icon = styled.svg`
     color: #ebecf3;
 
     &:hover {
-        color: #0aff9d;
+        color: var(--brand);
     }
 `;
 
@@ -46,7 +47,8 @@ function Header() {
                     <Icon><Orcid /></Icon>
                 </a>
             </Socials>
-            <Resume><a href="./Luca_Taglialatela_Resume__0923.pdf">Resumeeeee</a></Resume>
+            <Button>My Resume</Button>
+            {/* <Resume><a href="./Luca_Taglialatela_Resume__0923.pdf">hmps</a></Resume> */}
         </Headerbox>
     );
 }

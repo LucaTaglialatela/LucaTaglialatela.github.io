@@ -1,10 +1,11 @@
 import styled from 'styled-components';
 
 const Filler = styled.h1`
-    min-height: 500px;
-    line-height: 1.5;
     font-family: Georgia;
+    font-size: 2.4rem;
     font-weight: 100;
+    line-height: 2.4;
+    // min-height: 500px;
 `;
 
 function Greeting() {

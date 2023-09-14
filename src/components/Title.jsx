@@ -20,7 +20,7 @@ const HeaderLine = styled.div`
 function Title(props) {
     return (
         <SectionHeader>
-            <SectionTitle>{props.content}</SectionTitle>
+            <SectionTitle><span style={{ color: "var(--brand)", marginLeft: ".2rem"}}>/ </span>{props.content}</SectionTitle>
             <HeaderLine />
         </SectionHeader>
     );

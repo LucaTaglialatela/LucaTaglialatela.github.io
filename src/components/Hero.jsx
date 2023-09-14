@@ -26,7 +26,7 @@ function Hero() {
     return (
         <div>
             <HeroTitle>Hello, I'm Luca</HeroTitle>
-            <HeroSubtitle>and i'm very <span style={{ color: "#0aff9d", fontWeight: 900 }}>stoopid</span></HeroSubtitle>
+            <HeroSubtitle>and i'm very <span style={{ color: "var(--brand)", fontWeight: 900 }}>stoopid</span></HeroSubtitle>
             <HeroAbout>I am a recent graduate with a degree in CSIE. This website serves as a landing page for new connections and recruiters that are interested in my background and my work.</HeroAbout>
         </div>
     );

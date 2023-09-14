@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Mail } from './utils/SvgComponent';
 
 const ContactSection = styled.div`
     text-align: center;
@@ -17,11 +18,35 @@ const ContactAbout = styled.p`
     margin: auto;
 `;
 
+const Email = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    margin: auto;
+    font-size: 2rem;
+    transition: color .25s;
+`;
+
+const Icon = styled.svg`
+    height: 2.4rem;
+    width: 2.4rem;
+`;
+
 function Contact() {
     return (
         <ContactSection>
-            <ContactTitle>Contact</ContactTitle>
-            <ContactAbout>Please email me.</ContactAbout>
+            <ContactTitle>Contact<span style={{ color: "var(--brand)" }}> :</span></ContactTitle>
+            <ContactAbout>
+                If you're interested in working with me, please email me or connect with me via <a href="https://www.linkedin.com/in/lucataglialatela">LinkedIn</a> (●'◡'●)
+            </ContactAbout>
+            <br />
+            <a style={{  }} href="mailto:luca.taglialatela@gmail.com">
+                <Email>
+                    <Icon><Mail /></Icon>
+                    <span>luca.taglialatela@gmail.com</span>
+                </Email>
+            </a>
         </ContactSection>
     );
 }

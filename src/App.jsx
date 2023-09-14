@@ -8,6 +8,7 @@ import Contact from './components/Contact';
 
 import { Reveal } from './components/utils/Reveal';
 import styled from 'styled-components';
+import Experience from './components/Experience';
 
 const Home = styled.div`
     display: grid;
@@ -64,6 +65,7 @@ function App() {
             <SectionWrapper>
                 <Reveal>
                     <Title content="Experience" />
+                    <Experience />
                 </Reveal>
             </SectionWrapper>
             <SectionWrapper>
