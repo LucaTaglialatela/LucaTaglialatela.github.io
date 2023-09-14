@@ -20,13 +20,6 @@ const HeroAbout = styled.p`
     margin: auto;
 `;
 
-const HeaderLine = styled.div`
-    width: 100%;
-    height: 1px;
-    background: #ebecf3;
-    opacity: .3;
-`;
-
 // boxShadow: "inset 0px -.65rem 0px 0px #0aff9d"
 
 function Hero() {

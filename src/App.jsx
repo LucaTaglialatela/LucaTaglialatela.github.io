@@ -4,8 +4,9 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import Greeting from './components/Greeting';
 import Title from './components/Title';
-import { Reveal } from './components/utils/Reveal';
+import Contact from './components/Contact';
 
+import { Reveal } from './components/utils/Reveal';
 import styled from 'styled-components';
 
 const Home = styled.div`
@@ -13,16 +14,14 @@ const Home = styled.div`
     grid-template-columns: 60px 1fr;
 `;
 
-const Sidebar = styled.div``;
+const Sidebar = styled.div`
+    background-color: #080808;
+`;
 
 const Main = styled.div`
     display: block;
     padding: 0;
     margin: 0;
-`;
-
-const Content = styled.div`
-    // background-color: #2c2c2c;
 `;
 
 const SectionWrapper = styled.section`
@@ -42,17 +41,41 @@ function App() {
         <Sidebar></Sidebar>
         <Main>
             <Header />
-            <Content>
-                <SectionWrapper>
-                    <Reveal><Hero /></Reveal>    
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal><Greeting /></Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal><Title /></Reveal>
-                </SectionWrapper>
-            </Content>
+            <SectionWrapper>
+                <Reveal>
+                    <Hero />
+                </Reveal>    
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Greeting />
+                </Reveal>
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Title content="About" />
+                </Reveal>
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Title content="Projects" />
+                </Reveal>
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Title content="Experience" />
+                </Reveal>
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Title content="Education" />
+                </Reveal>
+            </SectionWrapper>
+            <SectionWrapper>
+                <Reveal>
+                    <Contact />
+                </Reveal>
+            </SectionWrapper>
         </Main>
     </Home>
   )
