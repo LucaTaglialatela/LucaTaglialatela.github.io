@@ -1,4 +1,6 @@
-import HLine from "./HLine";
+import HLine from "./utils/HLine";
+import SkillsList from "./utils/SkillsList";
+
 
 function Experience(props) {
     return (
@@ -22,6 +24,8 @@ function Experience(props) {
             <div style={{ fontSize: "1.8rem", fontWeight: "200" }}>
                 {props.description}
             </div>
+            <br/>
+            <SkillsList skills={props.skills}/>
             <div style={{ marginTop: "2.4rem", opacity: ".3" }}>
                 <HLine />
             </div>

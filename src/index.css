@@ -18,7 +18,12 @@
 
   --background: #111;
   --text: #ebecf3;
-  --brand: #0aff9d;
+  /* --brand: #0aff9d; */
+  --brand: #ff1866;
+}
+
+::selection {
+  background: var(--brand);
 }
 
 html {
@@ -31,19 +36,6 @@ html {
   margin: 0;
 }
 
-div {
-  display: block;
-}
-
-a {
-  color: var(--brand);
-  text-decoration: inherit;
-}
-a:hover {
-  color: var(--brand);
-  text-decoration: underline;
-}
-
 body {
   /* margin: 0; */
   /* display: flex; */
@@ -52,6 +44,20 @@ body {
   min-width: 320px;
   min-height: 100vh;
   overflow-y: scroll;
+}
+
+div {
+  display: block;
+}
+
+a {
+  color: var(--brand);
+  text-decoration: inherit;
+  font-weight: 400;
+}
+a:hover {
+  color: var(--brand);
+  text-decoration: underline;
 }
 
 h1 {

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import HeaderLine from './HLine';
+import HeaderLine from './utils/HLine';
 
 const SectionHeader = styled.div`
     display: flex;

@@ -16,7 +16,7 @@ const Headerbox = styled.header`
 
 const Socials = styled.div`
     display: flex;
-    gap: 1rem;
+    gap: 2.4rem;
 `;
 
 const Icon = styled.svg`

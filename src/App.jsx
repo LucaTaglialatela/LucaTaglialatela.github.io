@@ -1,16 +1,21 @@
-// import { useState } from 'react'
+import React, { useEffect, useState, useRef } from 'react'
 import './App.css';
+import styled from 'styled-components';
+
+// Sections
 import Header from './components/Header';
 import Hero from './components/Hero';
-import Greeting from './components/Greeting';
 import Title from './components/Title';
+import Greeting from './components/Greeting';
+import About from './components/About';
+import Projects from './components/Projects';
+import ExperienceSection from './components/ExperienceSection';
+import EducationSection from './components/EducationSection';
 import Contact from './components/Contact';
 
+// Utility Components
 import { Reveal } from './components/utils/Reveal';
-import styled from 'styled-components';
-import ExperienceSection from './components/ExperienceSection';
-import HLine from './components/HLine';
-import EducationSection from './components/EducationSection';
+import HLine from './components/utils/HLine';
 
 const Home = styled.div`
     display: grid;
@@ -18,11 +23,37 @@ const Home = styled.div`
 `;
 
 const Sidebar = styled.div`
+    position: sticky;
+    height: 100vh;
+    top: 0;
+    left: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #080808;
-    position: sticky;
+`;
+
+const Logo = styled.div`
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    margin: 1.8rem 0;
+    background: var(--text);
+    color: var(--background);
+    font-size: 1.2rem;
+    font-weight: 900;
+`;
+
+const NavbarLink = styled.a`
+    text-decoration: none;
+    color: var(--text);
+    writing-mode: vertical-lr;
+    margin-bottom: 2.4rem;
+    font-size: 1.2rem;
 `;
 
 const Main = styled.div`
@@ -40,24 +71,61 @@ const SectionWrapper = styled.section`
     display: block;
 `;
 
-const Logo = styled.div`
-    display: flex;
-    flex-shrink: 0;
-    align-items: center;
-    justify-content: center;
-    width: 45px;
-    height: 45px;
-    border-radius: 4px;
-    margin: 1.8rem 0;
-    background: var(--text);
-    color: var(--background);
-    font-size: 1.2rem;
-    font-weight: 900;
-`;
-
 /* About -> Project -> Experience -> Education -> Contact */
 
+/* Vite, React, Styled Components, Framer Motion */
+
 function App() {
+    const [highlightedSection, setHighlightedSection] = useState("");
+    const sectionsRef = useRef([]);
+
+    // Function to handle intersection changes
+    const handleIntersection = (entries) => {
+        entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            setHighlightedSection(entry.target.id);
+        }
+        });
+    };
+
+    useEffect(() => {
+        // Initialize the Intersection Observer
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.8 });
+
+        // Observe each section
+        sectionsRef.current.forEach((section) => { observer.observe(section) });
+
+        // Clean up the observer when the component unmounts
+        return () => observer.disconnect();
+    }, [highlightedSection]);
+
+    // Styles the currently active navbar link
+    const isActive = (sectionId) => { return { opacity: sectionId === highlightedSection ? 1.0 : 0.3 } };
+
+    // Sections by title and corresponding objects for dynamically generating React Components
+    const sectionTitles = ['Hero', 'Greeting', 'About', 'Projects', 'Experience', 'Education', 'Contact'];
+    const sectionComponents = {
+        'Hero': Hero,
+        'Greeting': Greeting,
+        "About": About,
+        "Projects": Projects,
+        'Experience': ExperienceSection,
+        'Education': EducationSection,
+        'Contact': Contact
+    };
+    
+    // Dynamically generate React Components for each section
+    const sections = sectionTitles.map((sectionTitle, index) => {
+        return (
+            <SectionWrapper key={sectionTitle} id={sectionTitle.toLowerCase()} ref={(ref) => (sectionsRef.current[index] = ref)}>
+                <Reveal>
+                    {!(['Hero', 'Greeting', 'Contact'].includes(sectionTitle)) ? <Title content={sectionTitle} /> : null}
+                    {(sectionTitle in sectionComponents) ? React.createElement(sectionComponents[sectionTitle], null) : null}
+                </Reveal>
+            </SectionWrapper>
+        );
+    });
+
     return (
         <Home>
             <Sidebar>
@@ -65,51 +133,15 @@ function App() {
                     <Logo>^_~</Logo>
                     <HLine />
                 </div>
-                <div style={{ writingMode: "vertical-lr", marginBottom: "2.4rem", fontSize: "1.2rem" }}>About</div>
-                <div style={{ writingMode: "vertical-lr", marginBottom: "2.4rem", fontSize: "1.2rem" }}>Projects</div>
-                <div style={{ writingMode: "vertical-lr", marginBottom: "2.4rem", fontSize: "1.2rem" }}>Experience</div>
-                <div style={{ writingMode: "vertical-lr", marginBottom: "2.4rem", fontSize: "1.2rem" }}>Education</div>
-                <div style={{ writingMode: "vertical-lr", marginBottom: "2.4rem", fontSize: "1.2rem" }}>Contact</div>
+                <NavbarLink href="#about" style={ isActive('about') }>About</NavbarLink>
+                <NavbarLink href="#projects" style={ isActive('projects') }>Projects</NavbarLink>
+                <NavbarLink href="#experience" style={ isActive('experience') }>Experience</NavbarLink>
+                <NavbarLink href="#education" style={ isActive('education') }>Education</NavbarLink>
+                <NavbarLink href="#contact" style={ isActive('contact') }>Contact</NavbarLink>
             </Sidebar>
             <Main>
                 <Header />
-                <SectionWrapper>
-                    <Reveal>
-                        <Hero />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal>
-                        <Greeting />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal>
-                        <Title content="About" />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal>
-                        <Title content="Projects" />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal>
-                        <Title content="Experience" />
-                        <ExperienceSection />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper>
-                    <Reveal>
-                        <Title content="Education" />
-                        <EducationSection />
-                    </Reveal>
-                </SectionWrapper>
-                <SectionWrapper id="contact">
-                    <Reveal>
-                        <Contact />
-                    </Reveal>
-                </SectionWrapper>
+                {sections}
                 <div style={{ display: "block", textAlign: "center", fontSize: "1.2rem", marginBottom: "3.6rem" }}>
                     Built by me with ❤️ <br/>
                     &#169;2023 Luca Taglialatela

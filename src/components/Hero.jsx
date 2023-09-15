@@ -26,10 +26,10 @@ const HeroAbout = styled.p`
 
 function Hero() {
     return (
-        <div>
-            <HeroTitle>Hello, I'm Luca</HeroTitle>
-            <HeroSubtitle>and i'm very <span style={{ color: "var(--brand)", fontWeight: 900 }}>stoopid</span></HeroSubtitle>
-            <HeroAbout>I am a recent graduate with a degree in CSIE. This website serves as a landing page for new connections and recruiters that are interested in my background and my work.</HeroAbout>
+        <div style={{ marginBlock: "4.8rem" }}>
+            <HeroTitle>Hello, I'm Luca<span style={{ color: "var(--brand)" }}>.</span></HeroTitle>
+            <HeroSubtitle><span style={{ color: "var(--brand)", fontWeight: 200 }}>&#62;_</span> I like <span style={{ color: "var(--brand)", fontWeight: 900 }}>Software-</span> and <span style={{ color: "var(--brand)", fontWeight: 900 }}>Full-Stack Engineering</span>.</HeroSubtitle>
+            <HeroAbout>I am a recent graduate with an MSc in Computer Science and Information Engineering. This page was built by myself from scratch, using Vite and React, and serves as a comprehensive introduction for those who are interested in my background and work. Please feel free to reach out!</HeroAbout>
             <Button href={"#contact"}>Contact me!</Button>
         </div>
     );

@@ -16,6 +16,7 @@ const StyledButton = styled.button`
     &:hover {
         opacity: .85;
     }
+
 `;
 
 function Button({ children, href }) {
