@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 import Button from './Button';
 
+import { Draggable } from './utils/Draggable';
+
 const HeroTitle = styled.h1`
     font-size: 9.6rem;
     font-weight: 900;
@@ -22,12 +24,21 @@ const HeroAbout = styled.p`
     padding-bottom: 1.2rem;
 `;
 
+// const HeroImg = styled.img`
+//     position: absolute;
+//     right: 0;
+//     z-index: -1;
+//     height: 80%;
+//     opacity: 0.4;
+// `;
+
 // boxShadow: "inset 0px -.65rem 0px 0px #0aff9d"
 
 function Hero() {
     return (
         <div style={{ marginBlock: "4.8rem" }}>
-            <HeroTitle>Hello, I'm Luca<span style={{ color: "var(--brand)" }}>.</span></HeroTitle>
+            {/* <HeroImg src="https://i.pinimg.com/originals/12/24/af/1224afc112018978863129363c423290.png" alt="Doraemon" /> */}
+            <HeroTitle>Hello, I'm Luca<Draggable><span style={{ color: "var(--brand)" }}>.</span></Draggable></HeroTitle>
             <HeroSubtitle><span style={{ color: "var(--brand)", fontWeight: 200 }}>&#62;_</span> I like <span style={{ color: "var(--brand)", fontWeight: 900 }}>Software-</span> and <span style={{ color: "var(--brand)", fontWeight: 900 }}>Full-Stack Engineering</span>.</HeroSubtitle>
             <HeroAbout>I am a recent graduate with an MSc in Computer Science and Information Engineering. This page was built by myself from scratch, using Vite and React, and serves as a comprehensive introduction for those who are interested in my background and work. Please feel free to reach out!</HeroAbout>
             <Button href={"#contact"}>Contact me!</Button>

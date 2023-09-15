@@ -16,6 +16,7 @@ import Contact from './components/Contact';
 // Utility Components
 import { Reveal } from './components/utils/Reveal';
 import HLine from './components/utils/HLine';
+import { ProgressBar } from './components/utils/ProgressBar';
 
 const Home = styled.div`
     display: grid;
@@ -70,6 +71,11 @@ const SectionWrapper = styled.section`
     overflow: hidden;
     display: block;
 `;
+
+// const ProgressBar = styled.div`
+//     position: sticky;
+//     top: calc(45px + 3.6rem);
+// `;
 
 /* About -> Project -> Experience -> Education -> Contact */
 
@@ -141,6 +147,7 @@ function App() {
             </Sidebar>
             <Main>
                 <Header />
+                <ProgressBar />
                 {sections}
                 <div style={{ display: "block", textAlign: "center", fontSize: "1.2rem", marginBottom: "3.6rem" }}>
                     Built by me with ❤️ <br/>

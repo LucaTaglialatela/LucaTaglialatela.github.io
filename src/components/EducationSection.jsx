@@ -12,6 +12,7 @@ function EducationSection() {
                 location={"Taipei, Taiwan"}
                 description={<>
                     {bullet} Conducted research in the <a href="https://mikechen.com">Human-Computer Interaction laboratory</a>, under advisorship of Mike Y. Chen, resulting in multiple publications at top tier conferences.<br/>
+                    {bullet} Awarded the <span style={{ fontStyle: "italic" }}>Outstanding International Graduate Student Scholarship</span> by the College of Electrical Engineering and Computer Science.<br/>
                     {bullet} Attended <a href="https://s2023.siggraph.org">SIGGRAPH 2023</a> from August 6-11 in Los Angeles, USA to present our award winning project <a href="https://s2023.siggraph.org/presentation/?id=gensub_141&sess=sess205">Alice in Gravityland</a>.
                 </>}
                 skills={[]}
