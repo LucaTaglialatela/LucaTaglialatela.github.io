@@ -8,7 +8,7 @@ import Hero from './components/Hero';
 import Title from './components/Title';
 import Greeting from './components/Greeting';
 import About from './components/About';
-import Projects from './components/Projects';
+import ProjectsSection from './components/ProjectsSection';
 import ExperienceSection from './components/ExperienceSection';
 import EducationSection from './components/EducationSection';
 import Contact from './components/Contact';
@@ -68,14 +68,16 @@ const SectionWrapper = styled.section`
     max-width: 1150px;
     margin: auto;
     padding: 9.6rem;
-    overflow: hidden;
-    display: block;
+    // overflow: hidden;
+    // display: block;
 `;
 
-// const ProgressBar = styled.div`
-//     position: sticky;
-//     top: calc(45px + 3.6rem);
-// `;
+const HeroImg = styled.img`
+    position: absolute;
+    right: 0;
+    opacity: 0.4;
+    translate: 0% -15%;
+`;
 
 /* About -> Project -> Experience -> Education -> Contact */
 
@@ -88,9 +90,9 @@ function App() {
     // Function to handle intersection changes
     const handleIntersection = (entries) => {
         entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            setHighlightedSection(entry.target.id);
-        }
+            if (entry.isIntersecting) {
+                setHighlightedSection(entry.target.id);
+            }
         });
     };
 
@@ -109,12 +111,11 @@ function App() {
     const isActive = (sectionId) => { return { opacity: sectionId === highlightedSection ? 1.0 : 0.3 } };
 
     // Sections by title and corresponding objects for dynamically generating React Components
-    const sectionTitles = ['Hero', 'Greeting', 'About', 'Projects', 'Experience', 'Education', 'Contact'];
+    const sectionTitles = ['Greeting', 'About', 'Projects', 'Experience', 'Education', 'Contact'];
     const sectionComponents = {
-        'Hero': Hero,
-        'Greeting': Greeting,
+        // 'Greeting': Greeting,
         "About": About,
-        "Projects": Projects,
+        "Projects": ProjectsSection,
         'Experience': ExperienceSection,
         'Education': EducationSection,
         'Contact': Contact
@@ -123,7 +124,7 @@ function App() {
     // Dynamically generate React Components for each section
     const sections = sectionTitles.map((sectionTitle, index) => {
         return (
-            <SectionWrapper key={sectionTitle} id={sectionTitle.toLowerCase()} ref={(ref) => (sectionsRef.current[index] = ref)}>
+            <SectionWrapper key={sectionTitle} id={sectionTitle.toLowerCase()} ref={(ref) => (sectionsRef.current[index + 1] = ref)}>
                 <Reveal>
                     {!(['Hero', 'Greeting', 'Contact'].includes(sectionTitle)) ? <Title content={sectionTitle} /> : null}
                     {(sectionTitle in sectionComponents) ? React.createElement(sectionComponents[sectionTitle], null) : null}
@@ -148,6 +149,12 @@ function App() {
             <Main>
                 <Header />
                 <ProgressBar />
+                <SectionWrapper ref={(ref) => (sectionsRef.current[0] = ref)}>
+                    <HeroImg src="https://i.pinimg.com/1200x/ba/0c/4d/ba0c4dc5ff3448e28f295f92e6b97121.jpg" alt="Mushroom cat" />
+                    <Reveal>
+                        <Hero />
+                    </Reveal>
+                </SectionWrapper>
                 {sections}
                 <div style={{ display: "block", textAlign: "center", fontSize: "1.2rem", marginBottom: "3.6rem" }}>
                     Built by me with ❤️ <br/>

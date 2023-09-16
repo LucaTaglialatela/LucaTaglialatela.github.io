@@ -28,8 +28,9 @@ const HeroAbout = styled.p`
 //     position: absolute;
 //     right: 0;
 //     z-index: -1;
-//     height: 80%;
+//     height: auto;
 //     opacity: 0.4;
+//     margin-right: 3.6rem;
 // `;
 
 // boxShadow: "inset 0px -.65rem 0px 0px #0aff9d"
@@ -38,6 +39,7 @@ function Hero() {
     return (
         <div style={{ marginBlock: "4.8rem" }}>
             {/* <HeroImg src="https://i.pinimg.com/originals/12/24/af/1224afc112018978863129363c423290.png" alt="Doraemon" /> */}
+            {/* <HeroImg src="https://i.pinimg.com/1200x/ba/0c/4d/ba0c4dc5ff3448e28f295f92e6b97121.jpg" alt="Mushroom cat" /> */}
             <HeroTitle>Hello, I'm Luca<Draggable><span style={{ color: "var(--brand)" }}>.</span></Draggable></HeroTitle>
             <HeroSubtitle><span style={{ color: "var(--brand)", fontWeight: 200 }}>&#62;_</span> I like <span style={{ color: "var(--brand)", fontWeight: 900 }}>Software-</span> and <span style={{ color: "var(--brand)", fontWeight: 900 }}>Full-Stack Engineering</span>.</HeroSubtitle>
             <HeroAbout>I am a recent graduate with an MSc in Computer Science and Information Engineering. This page was built by myself from scratch, using Vite and React, and serves as a comprehensive introduction for those who are interested in my background and work. Please feel free to reach out!</HeroAbout>

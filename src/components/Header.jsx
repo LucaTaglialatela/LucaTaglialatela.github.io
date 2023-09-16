@@ -7,7 +7,7 @@ const Headerbox = styled.header`
     top: 0;
     justify-content: space-between;
     align-items: center;
-    height: calc(45px + 3.6rem);
+    height: calc(40px + 3.6rem);
     padding: 0 3.6rem;
     position: sticky;
     backdrop-filter: blur(10px);
