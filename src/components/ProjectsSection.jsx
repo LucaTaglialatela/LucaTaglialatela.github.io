@@ -8,7 +8,8 @@ const ProjectList = styled.div`
 `;
 
 function ProjectsSection() {
-    const imgPath = "../public/";
+    // const imgPath = "../public/";
+    const imgPath = "./";
 
     return (
         <ProjectList>
