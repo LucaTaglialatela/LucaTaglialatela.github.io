@@ -55,6 +55,10 @@ const NavbarLink = styled.a`
     writing-mode: vertical-lr;
     margin-bottom: 2.4rem;
     font-size: 1.2rem;
+
+    &:hover {
+        color: var(--text);
+    }
 `;
 
 const Main = styled.div`
@@ -66,7 +70,8 @@ const Main = styled.div`
 const SectionWrapper = styled.section`
     position: relative;
     max-width: 1150px;
-    margin: auto;
+    margin-inline: auto;
+    margin-bottom: 4.8rem;
     padding: 9.6rem;
     // overflow: hidden;
     // display: block;
@@ -98,7 +103,7 @@ function App() {
 
     useEffect(() => {
         // Initialize the Intersection Observer
-        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.65 });
+        const observer = new IntersectionObserver(handleIntersection, { threshold: 0.52 });
 
         // Observe each section
         sectionsRef.current.forEach((section) => { observer.observe(section) });
@@ -157,7 +162,7 @@ function App() {
                     </Reveal>
                 </SectionWrapper>
                 {sections}
-                <div style={{ display: "block", textAlign: "center", fontSize: "1.2rem", marginBottom: "3.6rem" }}>
+                <div style={{ display: "block", textAlign: "center", fontSize: "1.2rem", marginTop: "9.6rem", marginBottom: "3.6rem" }}>
                     Built by me with ❤️ <br/>
                     &#169;2023 Luca Taglialatela
                 </div>

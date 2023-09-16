@@ -1,6 +1,19 @@
-export const LinkedIn = () => {
+import styled from "styled-components";
+
+const Icon = styled.svg`
+    height: 2.4rem;
+    width: 2.4rem;
+    color: #ebecf3;
+
+    &:hover {
+        color: var(--brand);
+    }
+`;
+
+export const LinkedIn = ({ style }) => {
     return (
-        <svg
+        <Icon
+            style={style}
             xmlns="http://www.w3.org/2000/svg"
             className="ionicon"
             viewBox="0 0 1024 1024"
@@ -11,13 +24,14 @@ export const LinkedIn = () => {
             stroke="currentColor"
             strokeWidth={0}
         />
-        </svg>
+        </Icon>
     );
 };
 
-export const GitHub = () => {
+export const GitHub = ({ style }) => {
     return (
-        <svg
+        <Icon
+            style={style}
             xmlns="http://www.w3.org/2000/svg"
             className="ionicon"
             viewBox="0 0 1024 1024"
@@ -28,13 +42,14 @@ export const GitHub = () => {
             stroke="currentColor"
             strokeWidth={0}
         />
-        </svg>
+        </Icon>
     );
 };
 
-export const Orcid = () => {
+export const Orcid = ({ style }) => {
     return (
-        <svg
+        <Icon
+            style={style}
             xmlns="http://www.w3.org/2000/svg"
             className="ionicon"
             viewBox="0 0 1024 1024"
@@ -45,14 +60,15 @@ export const Orcid = () => {
             stroke="currentColor"
             strokeWidth={0}
         />
-        </svg>
+        </Icon>
     );
 };
 
 
-export const Mail = () => {
+export const Mail = ({ style }) => {
     return (
-        <svg
+        <Icon
+            style={style}
             xmlns="http://www.w3.org/2000/svg"
             className="ionicon"
             viewBox="0 0 1024 1024"
@@ -63,13 +79,14 @@ export const Mail = () => {
             stroke="currentColor"
             strokeWidth={0}
         />
-        </svg>
+        </Icon>
     );
 };
 
-export const Cross = () => {
+export const Cross = ({ style }) => {
     return (
-        <svg
+        <Icon
+            style={style}
             xmlns="http://www.w3.org/2000/svg"
             className="ionicon"
             viewBox="0 0 1024 1024"
@@ -80,7 +97,7 @@ export const Cross = () => {
             stroke="currentColor"
             strokeWidth={0}
         />
-        </svg>
+        </Icon>
     );
 };
 

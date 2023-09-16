@@ -19,28 +19,18 @@ const Socials = styled.div`
     gap: 2.4rem;
 `;
 
-const Icon = styled.svg`
-    height: 2.4rem;
-    width: 2.4rem;
-    color: #ebecf3;
-
-    &:hover {
-        color: var(--brand);
-    }
-`;
-
 function Header() {
     return (
         <Headerbox>
             <Socials>
                 <a href="https://www.linkedin.com/in/lucataglialatela">
-                    <Icon><LinkedIn /></Icon>
+                    <LinkedIn />
                 </a>
                 <a href="https://github.com/LucaTaglialatela">
-                    <Icon><GitHub /></Icon>
+                    <GitHub />
                 </a>
                 <a href="https://orcid.org/0009-0000-2048-6691">
-                    <Icon><Orcid /></Icon>
+                    <Orcid />
                 </a>
             </Socials>
             <Button href={"./Luca_Taglialatela_Resume__0923.pdf"}>My Resume</Button>

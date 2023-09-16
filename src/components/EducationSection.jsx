@@ -4,7 +4,7 @@ function EducationSection() {
     const bullet = <span style={{ fontWeight: "200", color: "var(--brand)" }}>&#62;_</span>;
 
     return (
-        <div>
+        <div style={{ paddingBottom: "3.6rem" }}>
             <Experience
                 company={"National Taiwan University"}
                 jobTitle={"MSc Computer Science and Information Engineering (GPA: 4.1/4.3)"}

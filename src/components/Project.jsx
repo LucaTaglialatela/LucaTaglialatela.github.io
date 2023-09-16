@@ -21,13 +21,13 @@ const ProjectImg = styled.div`
     margin-block: 1.6rem;
 `;
 
-const Icon = styled.svg`
-    height: 2.4rem;
-    width: 2.4rem;
-    color: #ebecf3;
+const CustomLink = styled.span`
+    color: var(--brand);
+    font-weight: 400;
 
     &:hover {
-        color: var(--brand);
+        cursor: pointer;
+        text-decoration: underline;
     }
 `;
 
@@ -77,14 +77,19 @@ function Project(props) {
                 <ProjectTitle>{props.title}</ProjectTitle>
                 <HLine />
                 <a href="https://github.com/LucaTaglialatela" style={{ display: "flex", alignItems: "center" }}>
-                    <Icon><GitHub /></Icon>
+                    <GitHub />
                 </a>
             </div>
             <div style={{ fontSize: "1.6rem", color: "var(--brand)" }}>
                 {props.skills.join(" • ")}
             </div>
             <div style={{ fontSize: "1.8rem", fontWeight: "200" }}>
-                {props.summary} <a href="">Learn more</a>&#9193;
+                {props.summary}
+                &#32;
+                <CustomLink onClick={() => modalOpen ? closeModal() : openModal()}>
+                    Learn more
+                </CustomLink>
+                &#9193;
             </div>
         </div>
     );

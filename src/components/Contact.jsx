@@ -28,11 +28,6 @@ const Email = styled.div`
     transition: color .25s;
 `;
 
-const Icon = styled.svg`
-    height: 2.4rem;
-    width: 2.4rem;
-`;
-
 function Contact() {
     return (
         <ContactSection>
@@ -41,9 +36,9 @@ function Contact() {
                 If you're interested in working with me, please send an email or connect with me via <a href="https://www.linkedin.com/in/lucataglialatela">LinkedIn</a> (●'◡'●)
             </ContactAbout>
             <br />
-            <a style={{  }} href="mailto:luca.taglialatela@gmail.com">
+            <a href="mailto:luca.taglialatela@gmail.com">
                 <Email>
-                    <Icon><Mail /></Icon>
+                    <Mail style={{ color: "var(--brand)" }} />
                     <span>luca.taglialatela@gmail.com</span>
                 </Email>
             </a>
