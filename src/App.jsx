@@ -156,7 +156,7 @@ function App() {
                 <ProgressBar />
                 <SectionWrapper ref={(ref) => (sectionsRef.current[0] = ref)}>
                     {/* <HeroImg src="https://i.pinimg.com/originals/12/24/af/1224afc112018978863129363c423290.png" alt="Doraemon" /> */}
-                    <HeroImg src="https://i.pinimg.com/1200x/ba/0c/4d/ba0c4dc5ff3448e28f295f92e6b97121.jpg" alt="Mushroom cat" />
+                    {/* <HeroImg src="https://i.pinimg.com/1200x/ba/0c/4d/ba0c4dc5ff3448e28f295f92e6b97121.jpg" alt="Mushroom cat" /> */}
                     <Reveal>
                         <Hero />
                     </Reveal>

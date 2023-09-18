@@ -88,13 +88,14 @@ function Project(props) {
             <div style={{ fontSize: "1.6rem", color: "var(--brand)" }}>
                 {props.skills.join(" • ")}
             </div>
-            <div style={{ fontSize: "1.8rem", fontWeight: "200" }}>
+            <div style={{ fontSize: "1.6rem", fontWeight: "200", lineHeight: "3.2rem" }}>
                 {props.summary}
+                <br/>
                 &#32;
                 <CustomLink onClick={() => modalOpen ? closeModal() : openModal()}>
-                    Learn more
+                    Learn more...
                 </CustomLink>
-                &#9193;
+                {/* &#9193; */}
             </div>
         </div>
     );

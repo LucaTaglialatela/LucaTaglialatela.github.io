@@ -6,12 +6,12 @@ const StyledButton = styled.button`
     border: none;
     border-radius: 4px;
     padding: 1.2rem 2.4rem;
-    background: var(--brand);
-    color: var(--background);
-    font-size: 1.6rem;
     position: relative;
     overflow: hidden;
     transition: opacity .2s;
+    background: var(--brand);
+    color: var(--background);
+    font-size: 1.4rem;
 
     &:hover {
         opacity: .85;
@@ -19,9 +19,13 @@ const StyledButton = styled.button`
 
 `;
 
-function Button({ children, href }) {
+function Button({ children, href, target }) {
     return (
-        <a href={href}><StyledButton type="button">{children}</StyledButton></a>
+        <a href={href} target={target}>
+            <StyledButton type="button">
+                {children}
+            </StyledButton>
+        </a>
     );
 }
 

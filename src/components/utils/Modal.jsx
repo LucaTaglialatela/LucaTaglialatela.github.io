@@ -1,6 +1,7 @@
 import { motion } from "framer-motion"
 import styled from "styled-components";
 import { Cross } from "./SvgComponent";
+import HLine from "./HLine";
 
 const StyledBackdrop = styled(motion.div)`
     position: fixed;
@@ -75,6 +76,21 @@ const DropIn = {
 }
 
 function Modal(props) {
+    const projectLinks = props.links.map((link, index) => {
+        return (
+            <a key={index} href={link.href} style={{ display: "flex", alignItems: "center" }}>
+                {link.svg}
+            </a>
+        );
+    });
+
+    const projectDescriptions = props.description.map((paragraph, index) => {
+        return (<>
+            {(index > 0) && <br/>}
+            <p key={index}>{paragraph}</p>
+        </>);
+    });
+    
     return (
         <BackDrop onClick={props.handleClose}>
             <Icon onClick={props.handleClose}><Cross /></Icon>
@@ -87,14 +103,17 @@ function Modal(props) {
             >
                 <img src={props.image} alt="" style={{ width: "100%" }} />
                 <div style={{ padding: "2.4rem", lineHeight: "3.6rem" }}>
-                    <div style={{ fontSize: "3.6rem", fontWeight: "700" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "1.2rem", fontSize: "3.6rem", fontWeight: "700" }}>
                         {props.title}
+                        <HLine />
+                        {projectLinks}
                     </div>
                     <div style={{ fontSize: "1.6rem", color: "var(--brand)", marginBlock: "0.6rem" }}>
                         {props.skills.join(" • ")}
                     </div>
-                    <div style={{ fontSize: "1.6rem" }}>
-                        {props.description}
+                    <div style={{ fontSize: "1.6rem", lineHeight: "2.4rem" }}>
+                        {projectDescriptions}
+                        {/* {props.description} */}
                     </div>
                 </div>
             </StyledModal>

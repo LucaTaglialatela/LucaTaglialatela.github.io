@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import Button from './Button';
-
+import Resume from '../assets/documents/Luca_Taglialatela_Resume__0923.pdf'
 import { Draggable } from './utils/Draggable';
 
 const HeroTitle = styled.h1`
@@ -32,7 +32,9 @@ function Hero() {
             <HeroTitle>Hello, I'm Luca<Draggable><span style={{ color: "var(--brand)" }}>.</span></Draggable></HeroTitle>
             <HeroSubtitle><span style={{ color: "var(--brand)", fontWeight: 200 }}>&#62;_</span> I like <span style={{ color: "var(--brand)", fontWeight: 900 }}>Software-</span> and <span style={{ color: "var(--brand)", fontWeight: 900 }}>Full-Stack Engineering</span>.</HeroSubtitle>
             <HeroAbout>I am a recent graduate with an MSc in Computer Science and Information Engineering. This page was built by myself from scratch, using Vite and React, and serves as a comprehensive introduction for those who are interested in my background and work. Please feel free to reach out!</HeroAbout>
-            <Button href={"#contact"}>Contact me!</Button>
+            <Button href={"#contact"}>Contact Me</Button>
+            <span style={{ marginInline: "1.2rem" }}></span>
+            <Button href={Resume} target="_blank">My Resume</Button>
         </div>
     );
 }

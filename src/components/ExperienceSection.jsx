@@ -24,8 +24,8 @@ function ExperienceSection() {
                 jobTitle={"Teaching Assistant"}
                 duration={"09/2019 — 06/2021"}
                 location={"Amsterdam, The Netherlands"}
-                description={"Taught seminar-style classes and assisted students during practical sessions."}
-                skills={[]}
+                description={"Taught seminar-style classes and assisted students during practical sessions. Courses taught include:"}
+                skills={["Advanced Programming", "Data Structures and Algorithms", "Networks and Graphs (x2)", "Logic and Sets (x2)", "web Technology (x2)", "Computational Thinking", "Pervasive Computing (x2)", "and some more..."]}
             />
         </div>
     );

@@ -11,9 +11,10 @@ function EducationSection() {
                 duration={"09/2021 — 08/2023"}
                 location={"Taipei, Taiwan"}
                 description={<>
-                    {bullet} Conducted research in the <a href="https://mikechen.com">Human-Computer Interaction laboratory</a>, under advisorship of Mike Y. Chen, resulting in multiple publications at top tier conferences.<br/>
+                    {bullet} Attended <a href="https://s2023.siggraph.org">SIGGRAPH 2023</a> from August 6-11 in Los Angeles, USA to present our award winning project <a href="https://s2023.siggraph.org/presentation/?id=gensub_141&sess=sess205">Alice in Gravityland</a> at the Experience Hall's Immersive Pavilion.<br/>
+                    {bullet} Awarded first place in the Cross-Domain Category at the 2023 <a href="https://www.dcaward-vgw.org.tw/tw/about">Vision Get Wild</a> competition.<br/>
                     {bullet} Awarded the <span style={{ fontStyle: "italic" }}>Outstanding International Graduate Student Scholarship</span> by the College of Electrical Engineering and Computer Science.<br/>
-                    {bullet} Attended <a href="https://s2023.siggraph.org">SIGGRAPH 2023</a> from August 6-11 in Los Angeles, USA to present our award winning project <a href="https://s2023.siggraph.org/presentation/?id=gensub_141&sess=sess205">Alice in Gravityland</a>.
+                    {bullet} Conducted research in the <a href="https://mikechen.com">Human-Computer Interaction laboratory</a>, under advisorship of Mike Y. Chen, resulting in multiple publications at top tier conferences.
                 </>}
                 skills={[]}
             />

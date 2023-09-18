@@ -34,7 +34,15 @@ function Header() {
                     <Orcid />
                 </a>
             </Socials>
-            <Button href={Resume}>My Resume</Button>
+            <a
+                href={Resume}
+                target="_blank"
+                style={{
+                    color: "var(--text)",
+                    fontSize: "1.4rem",
+                }}
+            >{"> My Resume"}</a>
+            {/* <Button href={Resume}>My Resume</Button> */}
         </Headerbox>
     );
 }
