@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import HLine from "./utils/HLine";
-import { GitHub } from "./utils/SvgComponent";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import Modal from "./utils/Modal";
@@ -47,6 +46,14 @@ function Project(props) {
         document.body.style.overflow = disableBodyScroll;
       }, [modalOpen]);
 
+    const projectLinks = props.links.map((link, index) => {
+        return (
+            <a key={index} href={link.href} style={{ display: "flex", alignItems: "center" }}>
+                {link.svg}
+            </a>
+        );
+    });
+
     return (
         <div style={{ lineHeight: "3.6rem" }}>
             <ProjectImg>
@@ -76,9 +83,7 @@ function Project(props) {
             <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
                 <ProjectTitle>{props.title}</ProjectTitle>
                 <HLine />
-                <a href="https://github.com/LucaTaglialatela" style={{ display: "flex", alignItems: "center" }}>
-                    <GitHub />
-                </a>
+                {projectLinks}
             </div>
             <div style={{ fontSize: "1.6rem", color: "var(--brand)" }}>
                 {props.skills.join(" • ")}

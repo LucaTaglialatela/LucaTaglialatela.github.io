@@ -1,5 +1,6 @@
 import styled from 'styled-components';
 import { LinkedIn, GitHub, Orcid } from './utils/SvgComponent';
+import Resume from '../assets/documents/Luca_Taglialatela_Resume__0923.pdf'
 import Button from './Button';
 
 const Headerbox = styled.header`
@@ -33,7 +34,7 @@ function Header() {
                     <Orcid />
                 </a>
             </Socials>
-            <Button href={"./Luca_Taglialatela_Resume__0923.pdf"}>My Resume</Button>
+            <Button href={Resume}>My Resume</Button>
         </Headerbox>
     );
 }
