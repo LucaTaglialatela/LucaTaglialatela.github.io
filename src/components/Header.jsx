@@ -35,7 +35,8 @@ function Header() {
                 </a>
             </Socials>
             <a
-                href={Resume}
+                // href={Resume}
+                href="https://docs.google.com/document/d/1-dIuKpd-T90mCRZEgc1Dy0eFVZhKUL18crBd1NZGw3A/edit?usp=sharing"
                 target="_blank"
                 style={{
                     color: "var(--text)",
