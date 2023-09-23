@@ -58,6 +58,9 @@ const ResponsiveHeader = styled.div`
 `;
 
 const ResponsiveLinks = styled.div`
+    display: inherit;
+    gap: inherit;
+    
     @media (max-width: 800px) {
         display: flex;
         gap: 1.2rem;
