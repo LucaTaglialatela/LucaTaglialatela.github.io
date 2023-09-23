@@ -1,6 +1,6 @@
 function About() {
     return (
-        <div style={{ fontSize: "1.8rem", fontWeight: "200" }}>
+        <div style={{ fontSize: "var(--text-m)", fontWeight: "200" }}>
             Hello, hallo, 안녕하세요 and 你好! My name is Luca and I am a recent graduate from National Taiwan University (NTU) with a Master's
             degree in Computer Science and Information Engineering (MSc CSIE). In the past five years I have obtained hands-on experience
             programming in a variety of languages, including but not limited to, Python, JavaScript, C++ and Java. More recently, I have been a

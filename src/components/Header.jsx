@@ -40,7 +40,7 @@ function Header() {
                 target="_blank"
                 style={{
                     color: "var(--text)",
-                    fontSize: "1.4rem",
+                    fontSize: "var(--text-s)",
                 }}
             >{"> My Resume"}</a>
             {/* <Button href={Resume}>My Resume</Button> */}

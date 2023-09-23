@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Modal from "./utils/Modal";
 
 const ProjectTitle = styled.h2`
-    font-size: 2.2rem;
+    font-size: var(--text-l);
     font-weight: 700;
 `;
 
@@ -85,10 +85,10 @@ function Project(props) {
                 <HLine />
                 {projectLinks}
             </div>
-            <div style={{ fontSize: "1.6rem", color: "var(--brand)" }}>
+            <div style={{ fontSize: "var(--text-s)", color: "var(--brand)" }}>
                 {props.skills.join(" • ")}
             </div>
-            <div style={{ fontSize: "1.6rem", fontWeight: "200", lineHeight: "3.2rem" }}>
+            <div style={{ fontSize: "var(--text-s)", fontWeight: "200", lineHeight: "3.2rem" }}>
                 {props.summary}
                 <br/>
                 &#32;

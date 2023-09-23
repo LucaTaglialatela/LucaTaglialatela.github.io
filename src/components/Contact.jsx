@@ -6,14 +6,14 @@ const ContactSection = styled.div`
 `;
 
 const ContactTitle = styled.h1`
-    font-size: 9.6rem;
+    font-size: var(--text-huge);
     font-weight: 900;
     margin: auto;
     padding-bottom: 1.2rem;
 `;
 
 const ContactAbout = styled.p`
-    font-size: 1.8rem;
+    font-size: var(--text-m);
     font-weight: 400;
     margin: auto;
 `;
@@ -24,7 +24,7 @@ const Email = styled.div`
     justify-content: center;
     gap: 0.8rem;
     margin: auto;
-    font-size: 2rem;
+    font-size: var(--text-m);
     transition: color .25s;
 `;
 

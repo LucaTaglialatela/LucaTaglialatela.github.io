@@ -4,21 +4,21 @@ import Resume from '../assets/documents/Luca_Taglialatela_Resume__0923.pdf'
 import { Draggable } from './utils/Draggable';
 
 const HeroTitle = styled.h1`
-    font-size: 9.6rem;
+    font-size: var(--text-huge);
     font-weight: 900;
     margin: auto;
     padding-bottom: 1.2rem;
 `;
 
 const HeroSubtitle = styled.h2`
-    font-size: 2.4rem;
+    font-size: var(--text-l);
     font-weight: 400;
     margin: auto;
     padding-bottom: 0.6rem;
 `;
 
 const HeroAbout = styled.p`
-    font-size: 1.8rem;
+    font-size: var(--text-m);
     font-weight: 400;
     margin: auto;
     padding-bottom: 1.2rem;

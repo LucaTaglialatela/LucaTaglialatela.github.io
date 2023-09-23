@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { motion } from "framer-motion"
 import styled from "styled-components";
 import { Cross } from "./SvgComponent";
@@ -85,10 +86,10 @@ function Modal(props) {
     });
 
     const projectDescriptions = props.description.map((paragraph, index) => {
-        return (<>
+        return (<Fragment key={index}>
             {(index > 0) && <br/>}
-            <p key={index}>{paragraph}</p>
-        </>);
+            <p>{paragraph}</p>
+        </Fragment>);
     });
     
     return (
@@ -103,15 +104,15 @@ function Modal(props) {
             >
                 <img src={props.image} alt="" style={{ width: "100%" }} />
                 <div style={{ padding: "2.4rem", lineHeight: "3.6rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1.2rem", fontSize: "3.6rem", fontWeight: "700" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: "1.2rem", fontSize: "var(--text-xl)", fontWeight: "700" }}>
                         {props.title}
                         <HLine />
                         {projectLinks}
                     </div>
-                    <div style={{ fontSize: "1.6rem", color: "var(--brand)", marginBlock: "0.6rem" }}>
+                    <div style={{ fontSize: "var(--text-s)", color: "var(--brand)", marginBlock: "0.6rem" }}>
                         {props.skills.join(" • ")}
                     </div>
-                    <div style={{ fontSize: "1.6rem", lineHeight: "2.4rem" }}>
+                    <div style={{ fontSize: "var(--text-s)", lineHeight: "2.4rem" }}>
                         {projectDescriptions}
                         {/* {props.description} */}
                     </div>

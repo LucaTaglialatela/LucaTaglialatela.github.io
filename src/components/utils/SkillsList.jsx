@@ -7,7 +7,7 @@ const Skills = styled.div`
 `;
 
 const Chip = styled.span`
-    font-size: 1.6rem;
+    font-size: var(--text-s);
     background: #232323;
     padding: 0.2rem 0.8rem;
     border-radius: 999px;

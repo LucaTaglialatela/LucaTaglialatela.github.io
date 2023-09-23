@@ -5,8 +5,12 @@ import { GitHub, Youtube, Doi } from "./utils/SvgComponent";
 
 const ProjectList = styled.div`
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 3.2rem;
+    grid-template-columns: 1fr 1fr;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 1fr;
+    }
 `;
 
 function ProjectsSection() {

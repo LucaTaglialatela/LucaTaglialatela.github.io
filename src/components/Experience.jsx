@@ -5,15 +5,15 @@ import SkillsList from "./utils/SkillsList";
 function Experience(props) {
     return (
         <div style={{ marginTop: "2.4rem" }}>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "1.8rem", lineHeight: "3.6rem" }}>
-                <div style={{ fontSize: "2.2rem", fontWeight: "700" }}>
+            <div style={{ display: "flex", justifyContent: "space-between", lineHeight: "3.6rem" }}>
+                <div style={{ fontSize: "var(--text-l)", fontWeight: "700" }}>
                     {props.company}
                 </div>
-                <div>
+                <div style={{ fontSize: "var(--text-m)" }}>
                     {props.duration}
                 </div>
             </div>
-            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "1.8rem", lineHeight: "3.6rem"  }}>
+            <div style={{ display: "flex", justifyContent: "space-between", fontSize: "var(--text-m)", lineHeight: "3.6rem"  }}>
                 <div style={{ fontWeight: "700", color: "var(--brand)" }}>
                     {props.jobTitle}
                 </div>
@@ -21,7 +21,7 @@ function Experience(props) {
                     {props.location}
                 </div>
             </div>
-            <div style={{ fontSize: "1.8rem", fontWeight: "200" }}>
+            <div style={{ fontSize: "var(--text-m)", fontWeight: "200" }}>
                 {props.description}
             </div>
             <br/>

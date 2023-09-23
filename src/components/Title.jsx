@@ -8,7 +8,7 @@ const SectionHeader = styled.div`
 `;
 
 const SectionTitle = styled.h3`
-    font-size: 5.6rem;
+    font-size: var(--text-2xl);
 `;
 
 function Title(props) {

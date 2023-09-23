@@ -21,6 +21,10 @@ import { ProgressBar } from './components/utils/ProgressBar';
 const Home = styled.div`
     display: grid;
     grid-template-columns: 60px 1fr;
+
+    @media (max-width: 800px) {
+        grid-template-columns: 0px 1fr;
+    }
 `;
 
 const Sidebar = styled.div`
@@ -32,6 +36,10 @@ const Sidebar = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: #080808;
+
+    @media (max-width: 800px) {
+        visibility: hidden;
+    }
 `;
 
 const Logo = styled.div`
@@ -45,7 +53,7 @@ const Logo = styled.div`
     margin: 1.8rem 0;
     background: var(--text);
     color: var(--background);
-    font-size: 1.2rem;
+    font-size: var(--text-tiny);
     font-weight: 900;
 `;
 
@@ -54,7 +62,7 @@ const NavbarLink = styled.a`
     color: var(--text);
     writing-mode: vertical-lr;
     margin-bottom: 2.4rem;
-    font-size: 1.2rem;
+    font-size: var(--text-tiny);
 
     &:hover {
         color: var(--text);
@@ -75,6 +83,10 @@ const SectionWrapper = styled.section`
     padding: 9.6rem;
     // overflow: hidden;
     // display: block;
+
+    @media (max-width: 800px) {
+        padding: 3.6rem;
+    }
 `;
 
 const HeroImg = styled.img`
