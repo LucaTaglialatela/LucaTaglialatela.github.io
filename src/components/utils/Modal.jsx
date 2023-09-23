@@ -43,6 +43,28 @@ const Icon = styled.svg`
     }
 `;
 
+const ResponsiveHeader = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    font-size: var(--text-xl);
+    font-weight: 700;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.6rem;
+    }
+`;
+
+const ResponsiveLinks = styled.div`
+    @media (max-width: 800px) {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 0.6rem;
+    }    
+`;
+
 const BackDrop = ({ children, onClick }) => {
     return (
         <StyledBackdrop
@@ -104,11 +126,11 @@ function Modal(props) {
             >
                 <img src={props.image} alt="" style={{ width: "100%" }} />
                 <div style={{ padding: "2.4rem", lineHeight: "3.6rem" }}>
-                    <div style={{ display: "flex", alignItems: "center", gap: "1.2rem", fontSize: "var(--text-xl)", fontWeight: "700" }}>
+                    <ResponsiveHeader>
                         {props.title}
                         <HLine />
-                        {projectLinks}
-                    </div>
+                        <ResponsiveLinks>{projectLinks}</ResponsiveLinks>
+                    </ResponsiveHeader>
                     <div style={{ fontSize: "var(--text-s)", color: "var(--brand)", marginBlock: "0.6rem" }}>
                         {props.skills.join(" • ")}
                     </div>

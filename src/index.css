@@ -29,10 +29,8 @@
     --text-huge: 9.6rem;
 
     @media screen and (max-width: 800px) {
-        /* --text-xs: 1.2rem;
-        --text-s: 1.6rem;
-        --text-m: 1.8rem;
-        --text-l: 2.2rem; */
+        --text-m: 1.6rem;
+        --text-l: 1.8rem;
         --text-xl: 2.4rem;
         --text-2xl: 3.6rem;
         --text-huge: 5.6rem;

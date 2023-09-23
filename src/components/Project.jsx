@@ -30,6 +30,27 @@ const CustomLink = styled.span`
     }
 `;
 
+const ResponsiveHeader = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+
+    @media (max-width: 800px) {
+        flex-direction: column;
+        align-items: start;
+    }
+`;
+
+const ResponsiveLinks = styled.div`
+    all: inherit;
+
+    @media (max-width: 800px) {
+        display: flex;
+        gap: 1.2rem;
+        margin-bottom: 1.2rem;
+    }    
+`;
+
 function Project(props) {
     const [modalOpen, setModalOpen] = useState(false);
 
@@ -80,11 +101,11 @@ function Project(props) {
                     />
                 }
             </ProjectImg>
-            <div style={{ display: "flex", alignItems: "center", gap: "1.2rem" }}>
+            <ResponsiveHeader>
                 <ProjectTitle>{props.title}</ProjectTitle>
-                <HLine />
-                {projectLinks}
-            </div>
+                {(window.innerWidth > 800) && <HLine />}
+                <ResponsiveLinks>{projectLinks}</ResponsiveLinks>
+            </ResponsiveHeader>
             <div style={{ fontSize: "var(--text-s)", color: "var(--brand)" }}>
                 {props.skills.join(" • ")}
             </div>

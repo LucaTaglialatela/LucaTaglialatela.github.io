@@ -8,7 +8,7 @@ const ProjectList = styled.div`
     gap: 3.2rem;
     grid-template-columns: 1fr 1fr;
 
-    @media (max-width: 800px) {
+    @media (max-width: 1000px) {
         grid-template-columns: 1fr;
     }
 `;
