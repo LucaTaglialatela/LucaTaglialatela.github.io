@@ -166,6 +166,9 @@ Error generating stack: `+o.message+`
         gap: 0.6rem;
     }
 `,F4=N.div`
+    display: inherit;
+    gap: inherit;
+    
     @media (max-width: 800px) {
         display: flex;
         gap: 1.2rem;
@@ -201,7 +204,8 @@ Error generating stack: `+o.message+`
         align-items: start;
     }
 `,K4=N.div`
-    all: inherit;
+    display: inherit;
+    gap: inherit;
 
     @media (max-width: 800px) {
         display: flex;
