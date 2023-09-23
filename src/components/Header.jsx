@@ -12,6 +12,7 @@ const Headerbox = styled.header`
     padding: 0 3.6rem;
     position: sticky;
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 20;
 `;
 
