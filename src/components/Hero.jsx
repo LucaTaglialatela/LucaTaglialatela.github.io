@@ -34,7 +34,13 @@ function Hero() {
             <HeroAbout>I am a recent graduate with an MSc in Computer Science and Information Engineering. This page was built by myself from scratch, using Vite and React, and serves as a comprehensive introduction for those who are interested in my background and work. Please feel free to reach out!</HeroAbout>
             <Button href={"#contact"}>Contact Me</Button>
             <span style={{ marginInline: "1.2rem" }}></span>
-            <Button href={Resume} target="_blank">My Resume</Button>
+            {/* <Button
+                // href={Resume}
+                href="https://docs.google.com/document/d/1-dIuKpd-T90mCRZEgc1Dy0eFVZhKUL18crBd1NZGw3A/edit?usp=sharing"
+                target="_blank"
+            >
+                My Resume
+            </Button> */}
         </div>
     );
 }

@@ -33,7 +33,7 @@ function Contact() {
         <ContactSection>
             <ContactTitle>Contact<span style={{ color: "var(--brand)" }}> :</span></ContactTitle>
             <ContactAbout>
-                If you're interested in working with me, please send an email or connect with me via <a href="https://www.linkedin.com/in/lucataglialatela">LinkedIn</a> (●'◡'●)
+                Interested in working with me? Please send an email or connect with me via <a href="https://www.linkedin.com/in/lucataglialatela">LinkedIn</a>! (●'◡'●)
             </ContactAbout>
             <br />
             <a href="mailto:luca.taglialatela@gmail.com">

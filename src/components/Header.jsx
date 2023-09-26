@@ -35,7 +35,7 @@ function Header() {
                     <Orcid />
                 </a>
             </Socials>
-            <a
+            {/* <a
                 // href={Resume}
                 href="https://docs.google.com/document/d/1-dIuKpd-T90mCRZEgc1Dy0eFVZhKUL18crBd1NZGw3A/edit?usp=sharing"
                 target="_blank"
@@ -43,7 +43,9 @@ function Header() {
                     color: "var(--text)",
                     fontSize: "var(--text-s)",
                 }}
-            >{"> My Resume"}</a>
+            >
+                {"> My Resume"}
+            </a> */}
             {/* <Button href={Resume}>My Resume</Button> */}
         </Headerbox>
     );

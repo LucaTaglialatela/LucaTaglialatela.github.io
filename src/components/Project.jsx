@@ -81,7 +81,7 @@ function Project(props) {
             <ProjectImg>
                 <motion.img
                     src={props.image}
-                    alt="Mushroom cat"
+                    alt={props.title}
                     whileHover={{ scale: 1.1, rotate: 2 }}
                     whileTap={{ scale: 0.9, rotate: 2 }}
                     onClick={() => modalOpen ? closeModal() : openModal()}
