@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import Project from "./Project";
-import { AliceImg, RoboticsImg, DrivingVibeImg, PortfolioImg } from "../assets/images";
+import { AliceImg, RoboticsImg, DrivingVibeImg, PortfolioImg, ChatAppImg } from "../assets/images";
 import { GitHub, Youtube, Doi } from "./utils/SvgComponent";
 
 const ProjectList = styled.div`
@@ -44,6 +44,21 @@ function ProjectsSection() {
                     "Alice in Gravityland is an award-winning virtual reality experience exploring gravity with novel, around-the-head vibrotactile feedback using illusory tactile motion. The haptic feedback helps improve players\’ sense of directionality to increase their level of immersion. Inspired by Lewis Carroll\’s Alice\’s Adventures in Wonderland (1865), this multi-sensory adventure invites players to alter gravity to solve puzzles and experience gravity in a unique way.",
                     "As the project lead, I am proud that Alice in Gravityland has been accepted to, and presented at SIGGRAPH 2023, which is the premier conference for Computer Graphics and Interactive Techniques, after having won first place in the Cross-Domain Category at the 2023 Vision Get Wild competition in Kaohsiung, Taiwan.",
                     "The tech stack consists of Unity/C# for the VR component and Arduino/C++ for the hardware component. The headband connects to the VR application via the WiFi driver of a NodeMCU-32S platform, while the vibrotactile motors are controlled individually by DRV2605L drivers."
+                ]}
+            />
+            <Project
+                title={"C++ Chat Application"}
+                image={ChatAppImg}
+                links={[
+                    {svg: <GitHub />, href: "https://github.com/LucaTaglialatela/ChatApp"}
+                ]}
+                summary={"This project consists of C++ implementations of a chat client and server, allowing communication over sockets between multiple clients."}
+                skills={[ "C++", "Multithreading", "Socket-programming", "Git" ]}
+                description={[
+                    "This project consists of C++ implementations of a chat client and server, allowing communication over sockets between multiple clients.",
+                    "Clients connect to the server by providing a username (which cannot be the duplicate of any online clients) and, when successful, are able to retrieve a list of online users and send private messages to online users.",
+                    "In an earlier version of this project, clients were handled using a polling-based approach, which does not allow for any concurrency. In the current version, each client is assigned its own handling-thread on connecting with the server, thereby optimally utilizing the benefits of concurrency.",
+                    "The current version of this project is written using the Windows Sockets API (WSA), although cross-platform compatibility is achievable with some extra code."
                 ]}
             />
             <Project
