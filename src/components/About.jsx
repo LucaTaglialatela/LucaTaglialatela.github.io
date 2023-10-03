@@ -9,7 +9,7 @@ function About() {
             presented at top tier HCI conferences. These can be found on my <a href="https://orcid.org/0009-0000-2048-6691">ORCID</a> page.<br/>
             <br/>
             During my time off, I enjoy playing League of Legends or venturing through the city and visiting cat cafes. I also love riding my
-            bike and good walks along the riverside or through parks. I speak fluent Dutch and English, as well as a bit of Korean and Chinese.<br/>
+            bike and good walks along the riverside or through parks. I speak fluent Dutch and English, as well as a little bit of Korean and Chinese.<br/>
             <br/>
             Currently, I am actively looking for a job to kick-start my career in the software industry. Whether its pure software engineering
             or web development, I am familiar with both and enjoy anything related to writing and refactoring code. If you are looking to fill

@@ -25,7 +25,7 @@ function EducationSection() {
                 location={"Amsterdam, The Netherlands"}
                 description={<>
                     {bullet} Participated in and helped organize the <a href="https://nxpcup.nxp.com">EMEA NXP Cup</a> (2020 and 2021) at the Vrije Universiteit.<br/>
-                    {bullet} Placed first in the Amsterdam Algorithm Programming Junior Event.
+                    {bullet} Placed first in the 2019 Amsterdam Algorithm Programming Junior Event.
                 </>}
                 skills={[]}
             />
