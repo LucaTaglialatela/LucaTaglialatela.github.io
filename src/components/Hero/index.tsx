@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import {
   motion,
   useMotionTemplate,
@@ -7,6 +7,7 @@ import {
 } from "framer-motion";
 import { Stars } from "@react-three/drei";
 import { Canvas } from "@react-three/fiber";
+import Reveal from "../utils/Reveal";
 
 const COLORS = ["#13FFAA", "#1E67C6", "#CE84CF", "#DD335C"];
 
@@ -27,26 +28,35 @@ export const Hero = () => {
 
   return (
     <motion.section
-      className="relative grid min-h-screen place-content-center overflow-hidden bg-gray-950 px-4 py-24 text-gray-200"
+      className="relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 text-gray-200"
       style={{ backgroundImage }}
     >
-      <div className="relative z-10 flex flex-col items-center">
-        <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl front-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
-          Hello I am Luca
-        </h1>
-        <p className="my-6 max-w-2xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
-          I am a software engineer with 2 years of experience working across the
-          full stack. Please scroll down to learn more about me, or reach out!
-        </p>
-        <motion.button
-          className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
-          whileHover={{ scale: 1.015 }}
-          whileTap={{ scale: 0.985 }}
-          style={{ border, boxShadow }}
-        >
-          Contact me
-        </motion.button>
-      </div>
+      <Reveal>
+        <div className="relative z-10 flex flex-col items-center">
+          <h1 className="max-w-3xl bg-gradient-to-br from-white to-gray-400 bg-clip-text text-center text-3xl front-medium leading-tight text-transparent sm:text-5xl sm:leading-tight md:text-7xl md:leading-tight">
+            Hello I am Luca
+          </h1>
+          <p className="my-6 max-w-2xl text-center text-base leading-relaxed md:text-lg md:leading-relaxed">
+            I am a software engineer with 2 years of experience working across
+            the full stack. Please scroll down to learn more about me, or reach
+            out!
+          </p>
+          <motion.button
+            className="group relative flex w-fit items-center gap-1.5 rounded-full bg-gray-950/10 px-4 py-2 text-gray-50 transition-colors hover:bg-gray-950/50"
+            whileHover={{ scale: 1.015 }}
+            whileTap={{ scale: 0.985 }}
+            style={{ border, boxShadow }}
+            onClick={() => {
+              window.scrollTo({
+                top: document.body.scrollHeight,
+                behavior: "smooth",
+              });
+            }}
+          >
+            Contact me
+          </motion.button>
+        </div>
+      </Reveal>
       <div className="absolute inset-0 z-0">
         <Canvas>
           <Stars radius={50} count={1000} factor={3} fade speed={2} />
