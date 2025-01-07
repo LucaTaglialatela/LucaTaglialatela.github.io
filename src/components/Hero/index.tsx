@@ -28,7 +28,7 @@ export const Hero = () => {
 
   return (
     <motion.section
-      className="relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 text-gray-200"
+      className="relative grid min-h-screen place-content-center overflow-hidden px-4 py-24 bg-gray-950 text-gray-200"
       style={{ backgroundImage }}
     >
       <Reveal>
@@ -48,7 +48,7 @@ export const Hero = () => {
             style={{ border, boxShadow }}
             onClick={() => {
               window.scrollTo({
-                top: document.body.scrollHeight,
+                top: document.body.scrollHeight - window.innerHeight - 248,
                 behavior: "smooth",
               });
             }}

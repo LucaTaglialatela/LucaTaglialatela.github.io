@@ -4,11 +4,14 @@ import Contact from "./components/Contact";
 import { LinkedIn } from "./components/icons/LinkedInIcon";
 import { GitHub } from "./components/icons/GitHub";
 import { Orcid } from "./components/icons/Orcid";
+import Projects from "./components/Projects";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
 
 function App() {
   const header = (
     <div
-      className="px-14 flex items-center justify-end sticky top-0 z-20 text-base font-bold gap-3"
+      className="px-14 fixed w-full flex items-center justify-end top-0 z-50 text-base font-bold gap-3"
       style={{
         height: `calc(45px + 3.6rem)`,
         background: "var(--bg-opaque)",
@@ -28,7 +31,7 @@ function App() {
   );
 
   const footer = (
-    <div className="relative grid min-h-fit place-content-center overflow-hidden px-4 py-24 text-gray-200">
+    <div className="relative grid min-h-fit place-content-center overflow-hidden px-4 py-24 bg-gray-950 text-gray-200">
       <p className="max-w-5xl text-center text-sm leading-loose tracking-wide md:text-sm md:leading-loose">
         Made by me with ❤️
         <br />
@@ -38,10 +41,13 @@ function App() {
   );
 
   return (
-    <div className="bg-gray-950">
+    <div>
       {header}
       <Hero />
       <About />
+      <Projects />
+      <Experience />
+      <Education />
       <Contact />
       {footer}
     </div>
