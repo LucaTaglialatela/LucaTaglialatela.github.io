@@ -41,7 +41,9 @@ function App() {
   );
 
   return (
-    <div className="h-screen overflow-y-scroll scrollbar-hide">
+    <div
+    // className="h-screen overflow-y-scroll scrollbar-hide"
+    >
       {header}
       <Hero />
       <About />

@@ -20,7 +20,7 @@ export const Hero = () => {
   useEffect(() => {
     animate(color, COLORS, {
       ease: "easeInOut",
-      duration: 10,
+      duration: 5,
       repeat: Infinity,
       repeatType: "mirror",
     });
