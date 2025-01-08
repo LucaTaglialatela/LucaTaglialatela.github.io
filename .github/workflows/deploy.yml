@@ -37,9 +37,6 @@ jobs:
           path: ./dist
 
   deploy:
-    # Rest of your deploy job remains the same
-
-  deploy:
     name: Deploy
     needs: build
     runs-on: ubuntu-latest
