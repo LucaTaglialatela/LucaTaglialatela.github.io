@@ -14,19 +14,12 @@ const educationData = [
         </span>{" "}
         from August 6-11 in Los Angeles, USA to present our award winning
         project{" "}
-        <span className="text-decoration-line: underline">
-          <a href="https://s2023.siggraph.org/presentation/?id=gensub_141&sess=sess205">
-            Alice in Gravityland
-          </a>
-        </span>{" "}
-        at the Experience Hall's Immersive Pavilion.
+        <span style={{ fontStyle: "italic" }}>Alice in Gravityland</span> at the
+        Experience Hall's Immersive Pavilion.
       </>,
       <>
-        Awarded first place in the Cross-Domain Category at the 2023{" "}
-        <span className="text-decoration-line: underline">
-          <a href="https://www.dcaward-vgw.org.tw/tw/about">Vision Get Wild</a>
-        </span>{" "}
-        competition.
+        Awarded first place in the Cross-Domain Category at the 2023 Vision Get
+        Wild competition.
       </>,
       <>
         Awarded the{" "}
@@ -74,18 +67,18 @@ export const Education = () => {
           {educationData.map((edu, index) => (
             <div key={index} className="my-6">
               <div className="w-full max-w-5xl flex justify-between mx-auto">
-                <p className="text-left text-lg leading-loose tracking-wide font-bold md:text-xl md:leading-loose">
+                <p className="text-left text-sm leading-loose tracking-wide font-bold md:text-xl md:leading-loose">
                   {edu.school}
                 </p>
-                <p className="text-right text-lg leading-loose tracking-wide font-bold md:text-xl md:leading-loose">
+                <p className="text-right text-sm leading-loose tracking-wide font-bold md:text-xl md:leading-loose">
                   {edu.date}
                 </p>
               </div>
               <div className="w-full max-w-5xl flex justify-between mx-auto">
-                <p className="text-left text-lg leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-left text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
                   {edu.degree}
                 </p>
-                <p className="text-right text-lg leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-right text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
                   {edu.location}
                 </p>
               </div>
@@ -93,7 +86,7 @@ export const Education = () => {
                 {edu.descriptions.map((description, i) => (
                   <p
                     key={i}
-                    className="text-base leading-loose tracking-wide md:text-lg md:leading-loose"
+                    className="text-left text-xs leading-loose tracking-wide md:text-lg md:leading-loose"
                   >
                     {">_ "}
                     {description}

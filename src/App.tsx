@@ -19,7 +19,7 @@ function App() {
       }}
     >
       <a href={"https://www.linkedin.com/in/lucataglialatela/"}>
-        <LinkedIn className="w-8 h-8 mix-blend-normal text-gray-200" />
+        <LinkedIn className="w-8 h-8 text-gray-200" />
       </a>
       <a href={"https://github.com/LucaTaglialatela/"}>
         <GitHub className="w-8 h-8 text-gray-200" />
@@ -41,7 +41,7 @@ function App() {
   );
 
   return (
-    <div>
+    <div className="h-screen overflow-y-scroll scrollbar-hide">
       {header}
       <Hero />
       <About />
