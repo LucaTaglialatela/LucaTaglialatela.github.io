@@ -64,6 +64,11 @@ export const Education = () => {
     <div className="relative flex flex-col min-h-screen justify-center overflow-hidden px-4 py-24 bg-gray-200 text-gray-950">
       <Reveal width={"100%"}>
         <>
+          <div className="w-full max-w-5xl flex justify-between mx-auto">
+            <p className="text-left text-2xl leading-loose tracking-wide md:text-3xl md:leading-loose">
+              Education
+            </p>
+          </div>
           {educationData.map((edu, index) => (
             <div key={index} className="my-6">
               <div className="w-full max-w-5xl flex justify-between mx-auto">
