@@ -12,24 +12,32 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3  # Updated to v3
+        uses: actions/checkout@v4
 
       - name: Setup Node
-        uses: actions/setup-node@v3  # Updated to v3
+        uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: '20'  # Make sure this is set to 20
+          cache: 'npm'       # Optional: Enable caching
 
+      # Use npm ci instead of bahmutov/npm-install
       - name: Install dependencies
-        uses: bahmutov/npm-install@v1
+        run: npm ci
 
       - name: Build project
         run: npm run build
 
+      - name: Add .nojekyll file
+        run: touch ./dist/.nojekyll
+
       - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3  # Updated to v3
+        uses: actions/upload-artifact@v4
         with:
           name: production-files
           path: ./dist
+
+  deploy:
+    # Rest of your deploy job remains the same
 
   deploy:
     name: Deploy
