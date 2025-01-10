@@ -3,7 +3,7 @@ import Reveal from "../utils/Reveal";
 export const Contact = () => {
   const footer = (
     <div className="relative flex items-center justify-center min-h-fit bg-gray-950 text-gray-200">
-      <p className="max-w-5xl text-center text-sm leading-loose tracking-wide md:text-sm md:leading-loose">
+      <p className="max-w-5xl text-center text-xs leading-loose tracking-wide md:text-sm md:leading-loose">
         Made with ❤️
         <br />
         &copy; 2025 Luca Taglialatela
@@ -15,7 +15,7 @@ export const Contact = () => {
     <div className="relative flex flex-col justify-between min-h-screen overflow-hidden px-4 py-24 bg-gray-950 text-gray-200">
       <div className="flex-1 flex items-center justify-center">
         <Reveal>
-          <p className="my-6 max-w-6xl text-center text-xl leading-loose tracking-wide md:text-2xl md:leading-loose">
+          <p className="my-6 max-w-6xl text-center text-base leading-loose tracking-wide md:text-2xl md:leading-loose">
             In order to reach out, please send an email to{" "}
             <span className="text-decoration-line: underline">
               <a href={"mailto:luca.taglialatela@gmail.com"}>
