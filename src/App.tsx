@@ -32,16 +32,6 @@ function App() {
     </div>
   );
 
-  const footer = (
-    <div className="relative grid min-h-fit place-content-center overflow-hidden px-4 py-24 bg-gray-950 text-gray-200">
-      <p className="max-w-5xl text-center text-sm leading-loose tracking-wide md:text-sm md:leading-loose">
-        Made by me with ❤️
-        <br />
-        &copy; 2025 Luca Taglialatela
-      </p>
-    </div>
-  );
-
   return (
     <div
     // className="h-screen overflow-y-scroll scrollbar-hide"
@@ -53,7 +43,6 @@ function App() {
       <Experience />
       <Education />
       <Contact />
-      {footer}
     </div>
   );
 }
