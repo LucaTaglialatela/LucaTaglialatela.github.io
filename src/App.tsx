@@ -7,6 +7,7 @@ import { Orcid } from "./components/icons/Orcid";
 import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
+import ScrollLine from "./components/utils/ProgressBar";
 
 function App() {
   const header = (
@@ -27,6 +28,7 @@ function App() {
       <a href={"https://orcid.org/0009-0000-2048-6691/"}>
         <Orcid className="w-5 h-5 md:w-7 md:h-7 text-gray-200" />
       </a>
+      <ScrollLine />
     </div>
   );
 
