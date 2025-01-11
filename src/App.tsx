@@ -28,7 +28,6 @@ function App() {
       <a href={"https://orcid.org/0009-0000-2048-6691/"}>
         <Orcid className="w-5 h-5 md:w-7 md:h-7 text-gray-200" />
       </a>
-      <ScrollLine />
     </div>
   );
 
@@ -37,6 +36,7 @@ function App() {
     // className="h-screen overflow-y-scroll scrollbar-hide"
     >
       {header}
+      <ScrollLine />
       <Hero />
       <About />
       <Projects />

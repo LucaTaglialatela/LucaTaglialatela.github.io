@@ -5,9 +5,9 @@ const ScrollLine = () => {
   
     return (
       <motion.div 
-        className="fixed top-[calc(45px+3.6rem-4px)] left-0 right-0 h-0.5 bg-gray-200 origin-left z-50"
-        style={{ scaleX: scrollYProgress }}
-        initial={{ scaleX: 0 }}
+        className="fixed w-0.5 left-0 h-screen bg-gray-200 z-50 mix-blend-difference"
+        style={{ scaleY: scrollYProgress }}
+        initial={{ scaleY: 0 }}
       />
     );
   };
