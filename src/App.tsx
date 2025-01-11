@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import ScrollLine from "./components/utils/ProgressBar";
+import NavigationDots from "./components/utils/NavigationDots";
 
 function App() {
   const header = (
@@ -37,12 +38,25 @@ function App() {
     >
       {header}
       <ScrollLine />
-      <Hero />
-      <About />
-      <Projects />
-      <Experience />
-      <Education />
-      <Contact />
+      <NavigationDots />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="about">
+        <About />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="experience">
+        <Experience />
+      </div>
+      <div id="education">
+        <Education />
+      </div>
+      <div id="contact">
+        <Contact />
+      </div>
     </div>
   );
 }
