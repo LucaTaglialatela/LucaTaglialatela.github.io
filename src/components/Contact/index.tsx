@@ -41,11 +41,11 @@ export const Contact = () => {
   );
 
   return (
-    <div className="relative flex flex-col justify-between min-h-screen overflow-hidden px-4 py-24 bg-gray-950 text-gray-200">
+    <div className="relative flex flex-col justify-between min-h-screen overflow-hidden px-2 sm:px-4 py-12 sm:py-24 bg-gray-950 text-gray-200">
       <div className="flex-1 flex flex-col items-center justify-center">
         <Reveal>
-          <div className="w-full max-w-4xl space-y-8">
-            <p className="text-center text-base leading-loose tracking-wide md:text-2xl md:leading-loose">
+          <div className="w-full max-w-4xl space-y-4 sm:space-y-8">
+            <p className="text-center text-sm sm:text-base leading-loose tracking-wide md:text-2xl md:leading-loose">
               In order to reach out, please send an email to{" "}
               <span className="text-decoration-line: underline">
                 <a href={"mailto:luca.taglialatela@gmail.com"}>
@@ -65,7 +65,7 @@ export const Contact = () => {
               <form
                 ref={form}
                 onSubmit={handleSubmit}
-                className="w-full max-w-xl space-y-4"
+                className="w-full max-w-[90%] sm:max-w-xl space-y-3 sm:space-y-4"
               >
                 <div>
                   <label htmlFor="name" className="block mb-2">
@@ -76,7 +76,7 @@ export const Contact = () => {
                     name="user_name"
                     id="name"
                     required
-                    className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <div>
@@ -88,7 +88,7 @@ export const Contact = () => {
                     name="user_email"
                     id="email"
                     required
-                    className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <div>
@@ -100,14 +100,15 @@ export const Contact = () => {
                     id="message"
                     required
                     rows={4}
-                    className="w-full p-2 rounded bg-gray-800 border border-gray-700"
+                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-gray-200 text-gray-950 font-bold py-2 px-4 rounded 
-             transition-all duration-300 ease-in-out
-             hover:shadow-[0_0_20px_rgba(229,231,235,0.8)]"
+                  className="w-full bg-gray-200 text-gray-950 font-bold py-1.5 sm:py-2 px-3 sm:px-4 rounded 
+                       text-sm sm:text-base
+                       transition-all duration-300 ease-in-out
+                       hover:shadow-[0_0_20px_rgba(229,231,235,0.8)]"
                 >
                   Send Message
                 </button>

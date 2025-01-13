@@ -15,7 +15,7 @@ function App() {
     <div
       className="px-8 fixed w-full flex items-center justify-end top-0 z-50 text-base font-bold gap-3 mix-blend-difference md:px-14"
       style={{
-        height: `calc(45px + 3.6rem)`,
+        height: `clamp(45px, 8vh, calc(45px + 3.6rem))`,
         background: "rgba(0, 0, 0, 0)",
         backdropFilter: "blur(12px)",
       }}
