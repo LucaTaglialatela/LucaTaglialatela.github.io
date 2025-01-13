@@ -48,7 +48,7 @@ export const Hero = () => {
             style={{ border, boxShadow }}
             onClick={() => {
               window.scrollTo({
-                top: document.body.scrollHeight - window.innerHeight - 248,
+                top: document.body.scrollHeight - window.innerHeight,
                 behavior: "smooth",
               });
             }}
