@@ -68,7 +68,10 @@ export const Contact = () => {
                 className="w-full max-w-[90%] sm:max-w-xl space-y-3 sm:space-y-4"
               >
                 <div>
-                  <label htmlFor="name" className="block mb-2">
+                  <label
+                    htmlFor="name"
+                    className="block text-sm mb-2 md:text-xl"
+                  >
                     Name
                   </label>
                   <input
@@ -76,11 +79,14 @@ export const Contact = () => {
                     name="user_name"
                     id="name"
                     required
-                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
+                    className="w-full p-1.5 sm:p-2 text-sm md:text-xl rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block mb-2">
+                  <label
+                    htmlFor="email"
+                    className="block text-sm mb-2 md:text-xl"
+                  >
                     Email
                   </label>
                   <input
@@ -88,19 +94,22 @@ export const Contact = () => {
                     name="user_email"
                     id="email"
                     required
-                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
+                    className="w-full p-1.5 sm:p-2 text-sm md:text-xl rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm mb-2 md:text-xl"
+                  >
                     Message
                   </label>
                   <textarea
                     name="message"
                     id="message"
                     required
-                    rows={4}
-                    className="w-full p-1.5 sm:p-2 rounded bg-gray-800 border border-gray-700"
+                    rows={3}
+                    className="w-full p-1.5 sm:p-2 text-sm md:text-xl rounded bg-gray-800 border border-gray-700"
                   />
                 </div>
                 <button
