@@ -3,10 +3,11 @@ import Reveal from "../utils/Reveal";
 const educationData = [
   {
     school: "National Taiwan University",
-    degree: "MSc Computer Science and Information Engineering (GPA: 4.1/4.3)",
+    degree: "MSc Computer Science and Information Engineering",
     location: "Taipei, Taiwan",
     date: "09/2021 — 08/2023",
     descriptions: [
+      <>Graduated with a GPA of 4.1 out of 4.3.</>,
       <>
         Attended{" "}
         <span className="text-decoration-line: underline">
@@ -42,10 +43,14 @@ const educationData = [
   },
   {
     school: "Vrije Universiteit Amsterdam",
-    degree: "BSc Computer Science (GPA: 9.1/10.0, Rank: 3/180)",
+    degree: "BSc Computer Science",
     location: "Amsterdam, The Netherlands",
     date: "09/2018 — 07/2021",
     descriptions: [
+      <>
+        Graduated with a GPA of 9.1 out of 10.0, ranking third out of 180
+        students.
+      </>,
       <>
         Participated in and helped organize the{" "}
         <span className="text-decoration-line: underline"></span>
@@ -79,11 +84,11 @@ export const Education = () => {
                   {edu.date}
                 </p>
               </div>
-              <div className="w-full max-w-5xl flex justify-between mx-auto">
+              <div className="w-full max-w-5xl flex flex-col justify-between mx-auto md:flex-row">
                 <p className="text-left text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
                   {edu.degree}
                 </p>
-                <p className="text-right text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-left text-sm leading-loose tracking-wide md:text-right md:text-xl md:leading-loose">
                   {edu.location}
                 </p>
               </div>
