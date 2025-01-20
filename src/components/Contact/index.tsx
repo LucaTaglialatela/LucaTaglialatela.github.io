@@ -44,22 +44,21 @@ export const Contact = () => {
     <div className="relative flex flex-col justify-between min-h-screen overflow-hidden px-2 sm:px-4 py-12 sm:py-24 bg-gray-950 text-gray-200">
       <div className="flex-1 flex flex-col items-center justify-center">
         <Reveal>
-          <div className="w-full max-w-4xl space-y-4 sm:space-y-8">
-            <p className="text-center text-sm sm:text-base leading-loose tracking-wide md:text-2xl md:leading-loose">
-              In order to reach out, please send an email to{" "}
+          <div className="w-full max-w-4xl items-center space-y-4 sm:space-y-8">
+            <p className="text-center text-sm sm:text-base leading-loose tracking-wide md:text-xl md:leading-loose">
+              {"In order to reach out, please send an email to "}
               <span className="text-decoration-line: underline">
                 <a href={"mailto:luca.taglialatela@gmail.com"}>
                   luca.taglialatela@gmail.com
                 </a>
-              </span>{" "}
-              , find me on{" "}
+              </span>
+              {", find me on "}
               <span className="text-decoration-line: underline">
                 <a href={"https://www.linkedin.com/in/lucataglialatela/"}>
                   LinkedIn
                 </a>
               </span>
-              {", "}
-              or use the form below!
+              {", or use the form below!"}
             </p>
             <div className="flex justify-center w-full">
               <form

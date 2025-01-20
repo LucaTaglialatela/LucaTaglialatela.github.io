@@ -1,14 +1,14 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Experience from "./components/Experience";
+import Education from "./components/Education";
+import Projects from "./components/Projects";
+// import ScrollLine from "./components/utils/ProgressBar";
+import NavigationDots from "./components/utils/NavigationDots";
 import { LinkedIn } from "./components/icons/LinkedInIcon";
 import { GitHub } from "./components/icons/GitHub";
 import { Orcid } from "./components/icons/Orcid";
-import Projects from "./components/Projects";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import ScrollLine from "./components/utils/ProgressBar";
-import NavigationDots from "./components/utils/NavigationDots";
 
 function App() {
   const header = (
@@ -33,11 +33,9 @@ function App() {
   );
 
   return (
-    <div
-    // className="h-screen overflow-y-scroll scrollbar-hide"
-    >
+    <div>
       {header}
-      <ScrollLine />
+      {/* <ScrollLine /> */}
       <NavigationDots />
       <div id="home">
         <Hero />
