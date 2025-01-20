@@ -9,7 +9,7 @@ const experienceData = [
     descriptions: [
       <>
         Achieved a +10x performance boost, for 3D LiDAR simulation software,
-        significantly lowering loading times and expanding the product’s
+        significantly lowering loading times and expanding the product's
         usability to a wider range of devices, particularly improving
         accessibility for lower-end hardware.
       </>,
@@ -21,7 +21,7 @@ const experienceData = [
       <>
         Reduced time to market from 6 months to a month, by developing custom
         backend scripts to turn product generic data into actionable insights
-        and events specific to clients’ use cases.
+        and events specific to clients' use cases.
       </>,
     ],
   },
@@ -33,7 +33,17 @@ const experienceData = [
     descriptions: [
       <>
         Led multiple research projects, resulting in award-winning publications
-        in top tier conferences and journals.
+        in top tier conferences and journals (e.g.{" "}
+        <a href={"https://dl.acm.org/doi/10.1145/3588027.3595591"}>
+          <span className="text-decoration-line: underline">
+            Alice in Gravityland
+          </span>
+        </a>
+        {" and "}
+        <a href={"https://dl.acm.org/doi/10.1145/3604253"}>
+          <span className="text-decoration-line: underline">DrivingVibe</span>
+        </a>
+        ).
       </>,
     ],
   },
@@ -45,8 +55,8 @@ const experienceData = [
     descriptions: [
       <>
         Developed React components to automate data flows and improve the
-        company website's membership system. Collaborated closely with front-
-        and backend teams.
+        company's membership system's efficiency. Collaborated closely with
+        front- and backend teams.
       </>,
     ],
   },
