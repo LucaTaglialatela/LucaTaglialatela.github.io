@@ -44,7 +44,7 @@ const projectData = [
       "React",
       "Vite",
       "TailwindCSS",
-      "Motion Framer",
+      "Framer Motion",
       "Git",
       "GitHub Actions",
     ],
