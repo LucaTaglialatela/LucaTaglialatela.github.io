@@ -19,9 +19,9 @@ const experienceData = [
         integration of core features across the full stack and cloud deployment.
       </>,
       <>
-        Reduced time to market from 6 months to a month, by developing custom
-        backend scripts to turn product generic data into actionable insights
-        and events specific to clients' use cases.
+        Reduced time to market from 6 months to a month, on customer user cases,
+        by developing custom backend scripts to turn product generic data into
+        actionable insights and events specific to clients' use cases.
       </>,
     ],
   },
