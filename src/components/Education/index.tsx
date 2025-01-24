@@ -85,10 +85,10 @@ export const Education = () => {
                 </p>
               </div>
               <div className="w-full max-w-5xl flex flex-col justify-between mx-auto md:flex-row">
-                <p className="text-left text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-left text-xs leading-loose tracking-wide md:text-xl md:leading-loose">
                   {edu.degree}
                 </p>
-                <p className="text-left text-sm leading-loose tracking-wide md:text-right md:text-xl md:leading-loose">
+                <p className="text-left text-xs leading-loose tracking-wide md:text-right md:text-xl md:leading-loose">
                   {edu.location}
                 </p>
               </div>

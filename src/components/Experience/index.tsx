@@ -95,10 +95,10 @@ export const Experience = () => {
                 </p>
               </div>
               <div className="w-full max-w-5xl flex justify-between mx-auto">
-                <p className="text-left text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-left text-xs leading-loose tracking-wide md:text-xl md:leading-loose">
                   {exp.role}
                 </p>
-                <p className="text-right text-sm leading-loose tracking-wide md:text-xl md:leading-loose">
+                <p className="text-right text-xs leading-loose tracking-wide md:text-xl md:leading-loose">
                   {exp.location}
                 </p>
               </div>
